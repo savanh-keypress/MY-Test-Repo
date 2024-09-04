@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_outstanding_credit_split_wizard_form" model="ir.ui.view">
+        <field name="name">view.outstanding.credit.split.wizard.form</field>
+        <field name="model">outstanding.credit.split.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Outstanding Credit">
+                <sheet>
+                    <group>            
+                        <field name="account_move_id" invisible = '1'/>
+                        <field name="outstanding_move_line_id" invisible = '1'/>
+                        <field name="amount_due"/>
+                        <field name="available_credit_amount"/>
+                        <field name="paying_amount"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="kits_create_payment" type="object" class="oe_highlight"
+                        string="Pay"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
