@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="purchase_quotation_report_extend_spt" inherit_id="purchase.report_purchasequotation_document">
+            <xpath expr="//table[hasclass('table','table-sm')][1]/thead/tr/th[1]" position="before">
+                <th>#</th>
+                <th width="15%">Image</th>
+            </xpath>
+            <xpath expr="//table[hasclass('table','table-sm')][1]/tbody/t[1]" position="before">
+                <t t-set="i" t-value="1"/>
+            </xpath>
+            <xpath expr="//table[hasclass('table','table-sm')][1]/tbody/t[2]/tr/t/td[1]" position="before">
+                <td>
+                    <span t-esc="i"/>
+                    <t t-set="i" t-value="i+1"/>
+                </td>
+                <td>
+                    <span t-if="order_line.product_id.image_128" t-field="order_line.product_id.image_128" t-options="{'widget': 'image','style':'max-width: 100px'}"/>
+                </td>
+            </xpath>
+        </template>
+    </data>
+</odoo>

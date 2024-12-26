@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="product_template_report_action_spt" model="ir.actions.report">
+            <field name="name">Print Product</field>
+            <field name="model">product.template</field>
+            <field name="binding_model_id" ref="product.model_product_product"/>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">product_image_display_spt.product_template_report_template_spt</field>
+            <field name="report_file">product_image_display_spt.product_template_report_template_spt</field>
+        </record>
+        <record id="action_account_original_vendor_bill" model="ir.actions.report">
+            <field name="name">Print Product</field>
+            <field name="model">product.product</field>
+            <field name="binding_model_id" ref="product.model_product_product"/>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">product_image_display_spt.product_product_report_template_spt</field>
+            <field name="report_file">product_image_display_spt.product_product_report_template_spt</field>
+        </record>
+
+    </data>
+</odoo>
