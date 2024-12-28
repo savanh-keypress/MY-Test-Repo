@@ -2,7 +2,7 @@
 'version': '17.0.0.0',
 'summary': 'ddssddss',
 'sequence': 1,
-'images': ['static/description/Banner.png'],
+'images': ['static/description/banner.png'],
 'price': 1000.0,
 'currency': 'USD',
 'author': 'Keypress IT Services',
