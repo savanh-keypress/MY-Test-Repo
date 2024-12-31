@@ -8,7 +8,7 @@
 'assets': {'web.assets_backend': [('replace', 'account/static/src/components/account_payment_field/account_payment_field.js', 'kits_split_outstanding_credits/static/src/js/account_payment_field.js')]},
 'summary': 'Split Outstanding Credits',
 'description': 'Split Outstanding Credits',
-'license': ('OPL-1',),
+'license': 'OPL-1',
 'application': True,
 'installable': True,
 'auto_install': False,
