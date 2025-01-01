@@ -3,7 +3,7 @@
 'version': '16.0.1.0.2',
 'category': 'Extra Tools',
 'author': 'Keypress IT Services',
-'website': 'https://staging.keypress.co.in...........',
+'website': 'https://staging.keypress.co.in',
 'data': ['security/ir.model.access.csv', 'wizard/outstanding_credit_split_wizard_view.xml', 'wizard/res_config_setting_invoice_view.xml'],
 'assets': {'web.assets_backend': [('replace', 'account/static/src/components/account_payment_field/account_payment_field.js', 'kits_split_outstanding_credits/static/src/js/account_payment_field.js')]},
 'summary': 'Split Outstanding Credits',
