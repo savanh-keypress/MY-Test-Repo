@@ -16,4 +16,4 @@
 'maintainer': 'Keypress IT Services',
 'currency': 'USD',
 'price': 100.0,
-'images': ['static/description/orange.jpeg'],}
+'images': ['static/description/banner.jpg'],}
