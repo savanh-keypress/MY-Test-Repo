@@ -7,7 +7,7 @@
 'data': ['security/ir.model.access.csv', 'wizard/outstanding_credit_split_wizard_view.xml', 'wizard/res_config_setting_invoice_view.xml'],
 'assets': {'web.assets_backend': [('replace', 'account/static/src/components/account_payment_field/account_payment_field.js', 'kits_split_outstanding_credits/static/src/js/account_payment_field.js')]},
 'summary': 'Split Outstanding Credits',
-'description': 'Description',
+'description': 'xzcdvxv',
 'license': 'OPL-1',
 'application': True,
 'installable': True,
@@ -16,5 +16,4 @@
 'maintainer': 'Keypress IT Services',
 'currency': 'USD',
 'price': 100.0,
-'live_test_url': 'https://staging.keypress.co.in/odoo-apps/17.0/split',
-'images': ['static/description/banner.jpg'],}
+'images': ['static/description/orange.jpeg'],}
