@@ -1,5 +1,5 @@
 {'name': 'Savan',
-'version': '17.0.0.1',
+'version': '17.0.0.2',
 'summary': 'Summary\n',
 'sequence': 1,
 'price': 150.0,
