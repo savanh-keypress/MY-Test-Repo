@@ -7,7 +7,7 @@
 'data': ['security/ir.model.access.csv', 'wizard/outstanding_credit_split_wizard_view.xml', 'wizard/res_config_setting_invoice_view.xml'],
 'assets': {'web.assets_backend': [('replace', 'account/static/src/components/account_payment_field/account_payment_field.js', 'kits_split_outstanding_credits/static/src/js/account_payment_field.js')]},
 'summary': 'Split Outstanding Credits',
-'description': 'xzcdvxv',
+'description': 'Split Outstanding Credits',
 'license': 'OPL-1',
 'application': True,
 'installable': True,
@@ -15,5 +15,5 @@
 'depends': ['base', 'account'],
 'maintainer': 'Keypress IT Services',
 'currency': 'USD',
-'price': 100.0,
+'price': 50.0,
 'images': ['static/description/banner.jpg'],}
