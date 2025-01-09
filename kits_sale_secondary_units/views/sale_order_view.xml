@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="kits_sale_order_inherit_form_view_for_secondary_uom" model="ir.ui.view">
+            <field name="name">kits.sale.order.inherit.form.view.for.secondary.uom</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom_qty']"
+                    position="after">
+                    <field name="product_uom" groups="uom.group_uom" />
+                    <field name="secondary_qty" groups="uom.group_uom" />
+                    <field name="secondary_uom_id" groups="uom.group_uom" force_save="1"
+                        readonly="state in ('sale', 'done', 'cancel')"
+                        required='display_type == False'
+                    />
+                </xpath>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom_qty']"
+                    position="replace">
+                </xpath>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom']"
+                    position="before">
+                    <field name="product_uom_qty" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

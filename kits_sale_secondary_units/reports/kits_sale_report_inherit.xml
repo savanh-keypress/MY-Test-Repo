@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="kits_report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+            <th name="th_quantity" position="after">
+                <th name="th_secondary_unit" class="text-right" groups="uom.group_uom">
+                Secondary UOM
+                </th>
+            </th>
+            <xpath expr="//t[@t-if='not line.display_type']/td[2]" position="after">
+                <td class="text-center" groups="uom.group_uom">
+                    <span t-field="line.secondary_qty"/>
+                    <span t-field="line.secondary_uom_id" groups="uom.group_uom"/>
+                </td>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
