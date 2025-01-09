@@ -1,6 +1,6 @@
 {'name': 'Split Outstanding Credits',
 'sequence': 1,
-'version': '17.0.0.1',
+'version': '16.0.1.0.2',
 'category': 'Extra Tools',
 'author': 'Keypress IT Services',
 'website': 'https://staging.keypress.co.in',
@@ -16,4 +16,4 @@
 'maintainer': 'Keypress IT Services',
 'currency': 'USD',
 'price': 110.0,
-'images': ['static/description/banner.jpg'],}
+'images': ['static/description/desktop-computer-system (1).jpg'],}
