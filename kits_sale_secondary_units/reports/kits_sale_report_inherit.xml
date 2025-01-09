@@ -5,7 +5,7 @@
         <template id="kits_report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
             <th name="th_quantity" position="after">
                 <th name="th_secondary_unit" class="text-right" groups="uom.group_uom">
-                Secondary UOM
+                SECONDARY UOM
                 </th>
             </th>
             <xpath expr="//t[@t-if='not line.display_type']/td[2]" position="after">
