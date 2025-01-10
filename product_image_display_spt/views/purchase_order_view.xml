@@ -5,8 +5,7 @@
         <field name="model">purchase.order</field>
         <field name="inherit_id" ref="purchase.purchase_order_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//sheet/notebook/page/field[@name='order_line']/tree/field[@name='product_id']" position="before">
-                <!-- <field name="image" widget="image" height="10px" width="25px" /> -->
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="before">
                 <field name="image" widget="image" style="height:10px;width:25px;" />
             </xpath>
         </field>

@@ -1,88 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="delivery_slip_report_extend_spt" inherit_id="stock.report_delivery_document">
-        <xpath expr="//div[1]/table[@name='stock_move_table']/thead/tr/th[@name='th_sm_product']" position="before">
-            <th>
-                <strong>#</strong>
-            </th>
-            <th>Image</th>
-            <th>SKU</th>
-        </xpath>
-
-        <xpath expr="//table[hasclass('table','table-sm')]/tbody/t" position="before">
-            <t t-set="index" t-value="1"/>
-            <t t-set="total_product_qty" t-value="0"/>
+        <xpath expr="//th[@name='th_sm_product']" position="before">
+            <th class="text-center">Image</th>
         </xpath>
         <xpath expr="//table[hasclass('table','table-sm')]/tbody/tr/td" position="before">
-            <td>
-                <span t-esc="index"/>
-                <t t-set="index" t-value="index+1"/>
-                <t t-set="total_product_qty" t-value="move.product_qty+total_product_qty"/>
-            </td>
-
-            <td>
-                <img t-attf-src="data:image/*;base64,{{move.product_id.image_128}}" style="max-height:220px; max-width:40px;"/>
-            </td>
-            <td>
-                <span t-field="move.product_id.default_code" />
+            <td align="center">
+                <img t-attf-src="data:image/*;base64,{{move.product_id.image_128}}" style="max-height:220px; max-width:100px;"/>
             </td>
         </xpath>
-        <xpath expr="//table[hasclass('table','table-sm')]/tbody/tr/td[4]" position="replace">
-            <td>
-                <span t-field="move.product_id.name" />
-            </td>
-        </xpath>
-        <xpath expr="//div[1]/table[@name='stock_move_table']/thead/tr/th[5]" position="before">
-
-            <th>Barcode</th>
-        </xpath>
-        <xpath expr="//table[hasclass('table','table-sm')]/tbody/tr/td[5]" position="before">
-            <td>
-                <img t-if="move.product_id.barcode" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128',move.product_id.barcode, 600, 150)" style="width:100%;height:20%;margin: -17px;"/>
-            </td>
-        </xpath>
-
-        
 
         <!-- stock_move_line >> Product [Index,image] headings  -->
-        <xpath expr="//div[1]/table[@name='stock_move_line_table']/thead/tr/th" position="before">
-            <th>
-                <strong>#</strong>
-            </th>
-            <th>Image</th>
-            
-            <!-- <th>SKU</th> -->
+        <xpath expr="//div[1]/table[@name='stock_move_line_table']/thead/tr/th[@name='th_sml_product']" position="before">
+            <th class="text-center">Image</th>
         </xpath>
-        <xpath expr="//div[1]/table[@name='stock_move_line_table']/tbody/t" position="before">
-            <t t-set="index" t-value="1"/>
-            <t t-set="total_product_qty" t-value="0"/>
-        </xpath>
-       
 
         <!-- This xpath is applied when there is back order of product -->
         <!-- Added [Index, Image, SKU] in product line printing. -->
         <xpath expr="//table[@name='stock_backorder_table']/thead/tr/th[@name='th_sb_product']" position="before">
-            <th>
-                <strong>#</strong>
-            </th>
-            <th>Image</th>
-            
-            <!-- <th>SKU</th> -->
+            <th class="text-center" width="15%" >Image</th>
         </xpath>
         <xpath expr="//table[@name='stock_backorder_table']/tbody/tr/td" position="before">
-            <td>
-                <span t-esc="index"/>
-                <t t-set="index" t-value="index+1"/>
+            <td align="center">
+                <img t-attf-src="data:image/*;base64,{{bo_line.product_id.image_128}}" style="max-height:220px; max-width:100px;"/>
             </td>
-
-            <td>
-                <img t-attf-src="data:image/*;base64,{{bo_line.product_id.image_128}}" style="max-height:220px; max-width:40px;"/>
-            </td>
-            <!-- <td>
-                <span t-field="bo_line.product_id.default_code" />
-            </td> -->
         </xpath>
-
     </template>
 
 
@@ -90,36 +32,19 @@
     <!-- Added [Index, Image, SKU] in product line printing. -->
     <template id="delivery_slip_has_serial_inherit_spt" inherit_id="stock.stock_report_delivery_has_serial_move_line">
         <xpath expr="//td[1]" position="before">
-            <td>
-                <span t-esc="index"/>
-                <t t-set="index" t-value="index+1"/>
-            </td>
-
-            <td>
-                <img t-attf-src="data:image/*;base64,{{move_line.product_id.image_128}}" style="max-height:220px; max-width:40px;"/>
-            </td>
-            <td>
-                <span t-field="move_line.product_id.default_code" />
+            <td align="center">
+                <img t-attf-src="data:image/*;base64,{{move_line.product_id.image_128}}" style="max-height:220px; max-width:100px;"/>
             </td>
         </xpath>
     </template>
-
 
     <!-- Template Inherited for Done Picking product -->
     <!-- Added [Index, Image, SKU] in product line printing. -->
     <template id="delivery_slip_aggregated_move_lines_inherit_spt" inherit_id="stock.stock_report_delivery_aggregated_move_lines">
         <xpath expr="//tr/td[1]" position="before">
-            <td>
-                <span t-esc="index"/>
-                <t t-set="index" t-value="index+1"/>
+            <td align="center">
+                <img t-attf-src="data:image/*;base64,{{aggregated_lines[line]['product'].image_128}}" style="max-height:220px; max-width:100px;"/>
             </td>
-
-            <td>
-                <img t-attf-src="data:image/*;base64,{{aggregated_lines[line]['product'].image_128}}" style="max-height:220px; max-width:40px;"/>
-            </td>
-            <!-- <td>
-                <span t-esc="aggregated_lines[line]['product'].default_code"/>
-            </td> -->
         </xpath>
     </template>
 </odoo>

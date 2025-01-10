@@ -1,7 +1,7 @@
 
 # -*- coding: utf-8 -*-
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 class sale_order_line(models.Model):
     _inherit = 'sale.order.line'

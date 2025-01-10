@@ -7,14 +7,10 @@
                     <div class="oe_structure"/>
                     <h2>Products List</h2>
                     <br/>
-
                     <table class="table table-sm o_main_table">
                         <thead>
                             <tr>
-                                <th>
-                                    #
-                                </th>
-                                <th>
+                                <th class="text-center">
                                     Image
                                 </th>
                                 <th>
@@ -33,13 +29,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <t t-set="i" t-value="1"/>
                             <tr t-foreach="docs" t-as="doc">
-                                <td>
-                                    <span t-esc="i"/>
-                                    <t t-set="i" t-value="i+1"/>
-                                </td>
-                                <td>
+                                <td align="center">
                                     <span t-if="doc.image_128" t-field='doc.image_128' t-options="{'widget': 'image','style':'max-width: 100px'}"/>
                                 </td>
                                 <td>
@@ -54,11 +45,9 @@
                                  <td>
                                     <span t-field='doc.weight' />
                                 </td>
-                
                             </tr>
                         </tbody>
                     </table>
-
                     <div class="oe_structure"/>
                 </div>
             </t>

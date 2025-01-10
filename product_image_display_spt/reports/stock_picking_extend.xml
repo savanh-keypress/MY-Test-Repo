@@ -2,41 +2,13 @@
 <odoo>
     <data>
         <template id="stock_picking_extend" inherit_id="stock.report_picking">
-            <xpath expr="//table[hasclass('table','table-sm')]/thead/tr/th[1]" position="before">
-                <th>
-                    <strong>#</strong>
-                </th>
-                <th width="15%">Image</th>
-            </xpath>
-            <xpath expr="//table[hasclass('table','table-sm')]/tbody/tr" position="before">
-                <t t-set="i" t-value="1"/>
-                <t t-set="n" t-value="0"/>
+            <xpath expr="//th[@name='th_product']" position="before">
+                <th class="text-center" width="15%">Image</th>
             </xpath>
             <xpath expr="//table[hasclass('table','table-sm')]/tbody/tr/td" position="before">
-                <td>
-                    <span t-esc="i"/>
-                    <t t-set="i" t-value="i+1"/>
-                    <!-- <t t-set="n" t-value="ml.product_qty+n"/> -->
-                    <!-- <t t-set="n" t-value="ml.reserved_qty+n"/> -->
-                    <t t-set="n" t-value="ml.quantity_product_uom+n"/>
-                </td>
-                <td>
+                <td align="center">
                     <span t-if="ml.move_id.image" t-field="ml.move_id.image" t-options="{'widget': 'image','style':'max-width: 100px'}"/>
                 </td>
-            </xpath>
-            <xpath expr="//table[hasclass('table','table-sm')]" position="after">
-                <div class="col-xs-4 pull-right">
-                    <table class="table table-sm" style="min-width: 200px;max-width: 350px;">
-                        <tr class="border-black">
-                            <td>
-                                <strong>Total Quantity&amp;nbsp;:</strong>
-                            </td>
-                            <td class="text-right">
-                                <span t-esc="n"/>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
             </xpath>
         </template>
     </data>
