@@ -1,5 +1,5 @@
 {'name': 'Savan HIRAPARA',
-'version': '17.0.0.4',
+'version': '17.0.0.5',
 'summary': 'Summary\n',
 'sequence': 1,
 'price': 290.0,
