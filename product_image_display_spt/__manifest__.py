@@ -2,7 +2,7 @@
 'version': '17.0.0.4',
 'summary': 'Summary\n',
 'sequence': 1,
-'price': 560.0,
+'price': 290.0,
 'currency': 'INR',
 'author': 'Keypress IT Services',
 'description': 'Description',
