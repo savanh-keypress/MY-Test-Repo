@@ -1,6 +1,6 @@
 {'name': 'Split Outstanding Credits',
 'sequence': 1,
-'version': '17.0.0.2',
+'version': '17.0.0.1',
 'category': 'Extra Tools',
 'author': 'Keypress IT Services',
 'website': 'https://staging.keypress.co.in',
@@ -14,7 +14,6 @@
 'auto_install': False,
 'depends': ['base', 'account'],
 'maintainer': 'Keypress IT Services',
-'currency': 'USD',
-'price': 150.0,
-'images': ['static/description/banner.png'],
-'live_test_url': 'https://staging.keypress.co.in/odoo-apps/17.0/kits_split_outstanding_credits',}
+'currency': 'INR',
+'price': 400.0,
+'images': ['static/description/banner.png'],}
