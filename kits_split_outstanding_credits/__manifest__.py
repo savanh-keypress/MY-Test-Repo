@@ -1,6 +1,6 @@
 {'name': 'Split Outstanding Credits',
 'sequence': 1,
-'version': '17.0.0.1',
+'version': '17.0.0.2',
 'category': 'Extra Tools',
 'author': 'Keypress IT Services',
 'website': 'https://staging.keypress.co.in',
