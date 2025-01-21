@@ -1,5 +1,5 @@
 {'name': 'Odoo Sale Secondary UOM',
-'version': '17.0.0.1',
+'version': '17.0.0.2',
 'sequence': 1,
 'category': 'Extra Tools',
 'author': 'Keypress IT Services',
