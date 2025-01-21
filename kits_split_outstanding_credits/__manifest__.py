@@ -15,5 +15,5 @@
 'depends': ['base', 'account'],
 'maintainer': 'Keypress IT Services',
 'currency': 'INR',
-'price': 400.0,
+'price': 150.0,
 'images': ['static/description/banner.png'],}
