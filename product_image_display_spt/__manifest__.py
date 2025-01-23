@@ -1,5 +1,5 @@
 {'name': 'Odoo All In One Product Image Display',
-'version': '17.0.0.2',
+'version': '17.0.0.3',
 'summary': 'Odoo All In One Product Image Display',
 'sequence': 1,
 'images': ['static/description/banner.png'],
